@@ -8,15 +8,14 @@ permissions:
   contents: write
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          python-version: 3.x
-      - uses: actions/cache@v2
-        with:
-          key: ${{ github.ref }}
-          path: .cache
-      - run: pip install mkdocs-material 
-      - run: mkdocs gh-deploy --force
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install docs deps
+        run: pip install mkdocs mkdocs-material
+      - name: Build & deploy docs
+        run: mkdocs gh-deploy --force
