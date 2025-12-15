@@ -1,4 +1,4 @@
-# Cuaca Prediction 🌧️🌤️
+# Cuaca Prediction
 [![GitHub](https://img.shields.io/badge/GitHub-code-blue?style=flat&logo=github&logoColor=white&color=red)](https://github.com/prsdm/mlops-project)
 
 Prediksi hujan (label biner `Rain`) dari fitur cuaca harian: temperatur, kelembapan, hujan (`RR`), penyinaran (`SS`), angin (`FF_X`, `FF_AVG`, `DDD_X`, `DDD_CAR`), serta tanggal (`TANGGAL` → `Month`/`Day`).
